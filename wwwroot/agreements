@@ -1,0 +1,1 @@
+01,Agua,http://35.185.30.69:8080/servicios/pagos/v1/,payments,rest,01|02,Gas,http://35.185.30.69:8080/servicios/pagos/v1/,payments,rest,01|03,Luz,http://35.185.30.69:6060/servicios/pagos/v1/,payments,rest,02|04,Telefonia,http://35.185.30.69:6060/servicios/pagos/v1/,payments,rest,02|05,otro,htt://localhost,payments,SOAP,01

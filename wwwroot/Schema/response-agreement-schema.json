@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResponseAgreement",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "description": "Codigo Http"
+    },
+    "message": {
+      "type": "string",
+      "description": "Mensaje de respuesta"
+    },
+    "data": {
+      "properties": {
+        "id": {
+          "type": "string",         
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "invoiceid": {
+          "type": "number",
+          "format": "long",
+          "description": ""
+        },
+        "operationservice": {
+          "type": "string",
+          "description": ""
+        },
+        "url": {
+          "type": "string",
+          "description": ""
+        },
+        "operation":{
+          "type": "string",
+          "description": ""
+        },
+        "type":{
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "required": [
+    "code"
+  ]
+}

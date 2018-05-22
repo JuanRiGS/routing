@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>routing</name>
+    </assembly>
+    <members>
+        <member name="M:routingAgreement.Controllers.RoutingController.GetRouting(System.String)">
+            <summary>Consultarla ruta  de un convenio</summary>
+            <remarks>Consulta la informacion de convenio de la factura ingresada</remarks>
+            <param name="invoicereferencia"></param>
+            <returns>Retorna la informacion del convenio a enrutar</returns>
+            <response code="200">Ok</response>
+            <response code="500">Internal Server Error</response>    
+        </member>
+        <member name="M:routingAgreement.Controllers.RoutingController.AddRoutingAgreement(routingAgreement.Models.RequestAgreement)">
+            <summary>Registra el routing de un convenio</summary>
+            <remarks>Registra el routing para el convenio de la factura solicitada</remarks>
+            <param name="data"></param>
+            <returns>Retorna los datos del convenio registrado</returns>
+            <response code="200">Ok</response>
+            <response code="500">Internal Server Error</response>    
+        </member>
+    </members>
+</doc>

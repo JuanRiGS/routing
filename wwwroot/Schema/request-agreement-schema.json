@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RequestAgreement",
+  "data": {
+    "properties": {
+      "id": {
+        "type": "string",         
+        "description": ""
+      },
+      "name": {
+        "type": "string",
+        "description": ""
+      },
+      "type": {
+        "type": "string",
+        "description": ""
+      },
+      "operationservice": {
+        "type": "string",
+        "description": ""
+      },
+      "url": {
+        "type": "string",
+        "description": ""
+      },
+      "operation":{
+        "type": "string",
+        "description": ""
+      }
+    } 
+  },       
+"required": [
+    "id",
+    "name",
+    "operationservice",
+    "operation"
+  ]
+}

@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  netcore:
+    image: routing
+    build: .
+    ports:
+      - 9002:9002

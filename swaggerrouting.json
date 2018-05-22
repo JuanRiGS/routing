@@ -1,0 +1,170 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1.5",
+    "title": "Routing",
+    "description": "Intermediate Routing Agreements",
+    "contact": {
+      "name": ": Especialización AES - MODVAL"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:9002",
+  "paths": {
+    "/api/Routing/getAgreementrouting/{invoicereferencia}": {
+      "get": {
+        "tags": [
+          "Routing"
+        ],
+        "summary": "Consultarla ruta  de un convenio",
+        "description": "Consulta la informacion de convenio de la factura ingresada",
+        "operationId": "ApiRoutingGetAgreementroutingByInvoicereferenciaGet",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "invoicereferencia",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/ResponseAgreement"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/Routing/addroutingAgreement": {
+      "post": {
+        "tags": [
+          "Routing"
+        ],
+        "summary": "Registra el routing de un convenio",
+        "description": "Registra el routing para el convenio de la factura solicitada",
+        "operationId": "ApiRoutingAddroutingAgreementPost",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/RequestAgreement"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/ResponseAgreement"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ResponseAgreement": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/Agreement"
+        },
+        "code": {
+          "format": "int32",
+          "default": 0,
+          "type": "integer"
+        },
+        "message": {
+          "default": "",
+          "type": "string"
+        }
+      }
+    },
+    "Agreement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "invoiceid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationservice": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "RequestAgreement": {
+      "required": [
+        "id",
+        "name",
+        "type",
+        "operationservice",
+        "url",
+        "operation"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "operationservice": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
